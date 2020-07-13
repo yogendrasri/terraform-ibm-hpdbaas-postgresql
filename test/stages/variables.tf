@@ -15,7 +15,7 @@ variable "region" {
   description = "Region for VLANs defined in private_vlan_number and public_vlan_number."
 }
 
-variable "tools_namespace" {
+variable "namespace" {
   type        = string
   description = "Namespace for tools"
 }
@@ -47,4 +47,28 @@ variable "vpc_cluster" {
   type        = bool
   description = "Flag indicating that this is a vpc cluster"
   default     = false
+}
+
+variable "key-protect-region" {
+  type        = string
+  description = "The region where the Key Protect instance has been provisioned"
+  default     = ""
+}
+
+variable "key-protect-name" {
+  type        = string
+  description = "The name of the Key Protect instance"
+  default     = ""
+}
+
+variable "key-protect-key" {
+  type        = string
+  description = "The name of the key in the Key Protect instance"
+  default     = ""
+}
+
+variable "authorize-kms" {
+  type        = string
+  description = "Flag indicating that the authorization for MongoDB to read keys in the KMS should be created"
+  default     = "true"
 }
