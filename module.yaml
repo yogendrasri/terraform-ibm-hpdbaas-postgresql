@@ -1,6 +1,6 @@
 name: ibm-mongodb
 type: terraform
-description: Module to provision Databases for MongoDB instance
+description: Module to provision Hyper Protect DBaaS for MongoDB instance
 tags:
     - tools
     - infrastructure

@@ -4,8 +4,8 @@ module "dev_tools_mongodb" {
   resource_group_name = var.resource_group_name
   resource_location   = var.region
   name_prefix         = "${var.name_prefix}_2"
-  key-protect-region  = var.key-protect-region
-  key-protect-name    = var.key-protect-name
-  key-protect-key     = var.key-protect-key
+  hpcs-region  = var.hpcs-region
+  hpcs-name    = var.hpcs-name
+  hpcs-key     = var.hpcs-key
   authorize-kms       = var.authorize-kms == "true"
 }
