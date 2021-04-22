@@ -21,10 +21,20 @@ variable "region" {
   description = "Region for VLANs defined in private_vlan_number and public_vlan_number."
 }
 
+variable "namespace" {
+  type        = string
+  description = "Namespace for tools"
+}
+
 variable "cluster_name" {
   type        = string
   description = "The name of the cluster"
   default     = ""
+}
+
+variable "cluster_type" {
+  type        = string
+  description = "The type of cluster that should be created (openshift or kubernetes)"
 }
 variable "name_prefix" {
   type        = string
