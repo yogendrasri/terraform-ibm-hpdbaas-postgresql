@@ -54,7 +54,7 @@ variable "hpcs-region" {
 variable "hpcs-resource-group" {
   type        = string
   description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
-  default     = ""
+  default     = "appdev-cloud-native"
 }
 
 variable "hpcs-name" {
