@@ -5,6 +5,12 @@ variable "resource_group_name" {
   description = "Existing resource group where the IKS cluster will be provisioned."
 }
 
+variable "hpcs-resource-group" {
+  type        = string
+  description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
+  
+}
+
 variable "ibmcloud_api_key" {
   type        = string
   description = "The api key for IBM Cloud access"
