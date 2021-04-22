@@ -8,4 +8,5 @@ module "dev_tools_mongodb" {
   hpcs-name    = var.hpcs-name
   hpcs-key     = var.hpcs-key
   authorize-kms       = var.authorize-kms == "true"
+  ibmcloud_api_key    = var.ibmcloud_api_key
 }
