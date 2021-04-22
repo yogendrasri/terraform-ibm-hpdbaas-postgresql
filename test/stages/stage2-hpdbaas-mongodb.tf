@@ -1,4 +1,4 @@
-module "dev_tools_mongodb" {
+module "hpdbaas_mongodb" {
   source = "./module"
 
   resource_group_name = module.resource_group.name
