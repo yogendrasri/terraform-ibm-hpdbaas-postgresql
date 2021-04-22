@@ -11,7 +11,7 @@ variable "resource_group_name" {
 variable "resource_location" {
   type        = string
   description = "Geographic location of the resource (e.g. us-south, us-east)"
-  default = "us-south"
+  #default = "us-south"
 }
 
 variable "tags" {
@@ -54,7 +54,7 @@ variable "hpcs-region" {
 variable "hpcs-resource-group" {
   type        = string
   description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
-  
+  default     = ""
 }
 
 variable "hpcs-name" {
