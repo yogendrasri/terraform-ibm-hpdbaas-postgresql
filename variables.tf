@@ -23,14 +23,14 @@ variable "tags" {
 variable "name_prefix" {
   type        = string
   description = "The prefix name for the service. If not provided it will default to the resource group name"
-  default     = ""
+  #default     = ""
 }
 
 # mongodb-flexible or mongodb-free
 variable "plan" {
   type        = string
   description = "The type of plan the service instance should run under (standard)"
-  default     = "mongodb-free"
+  #default     = "mongodb-free"
 }
 
 variable "private_endpoint" {
@@ -48,25 +48,25 @@ variable "role" {
 variable "hpcs-region" {
   type        = string
   description = "The region where the hpcs instance has been provisioned. If not provided defaults to the same region as the MongoDB instance"
-  default     = ""
+  
 }
 
 variable "hpcs-resource-group" {
   type        = string
   description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
-  default     = "appdev-cloud-native"
+  
 }
 
 variable "hpcs-name" {
   type        = string
   description = "The name of the hpcs instance"
-  default     = "appdev-cloud-native-hpcs"
+  
 }
 
 variable "hpcs-key" {
   type        = string
   description = "The id of the key in the hpcs instance"
-  default     = "d9d7811e-afd5-41dd-89da-c472b89fd896"
+  #default     = "d9d7811e-afd5-41dd-89da-c472b89fd896"
 }
 
 variable "authorize-kms" {
@@ -78,25 +78,25 @@ variable "authorize-kms" {
 variable "cluster_name" {
   type        = string
   description = "The name of the cluster"
-  default     = "dbaas-cluster"
+  #default     = "dbaas-cluster"
 }
 
 variable "admin_name" {
   type        = string
   description = "The name of the database admin"
-  default     = "admin"
+  #default     = "admin"
 }
 
 variable "password" {
   type        = string
-  description = "The password of database admin"
-  default     = "Workstation*123"
+  description = "The password of database admin(15 characters minimum, at least one uppercase character, one lowercase character and one number)"
+  #default     = "Workstation*123"
 }
 
-variable "confirm_password" {
+variable "confirm_password" {  
   type        = string
-  description = "The confirm-password of database admin"
-  default     = "Workstation*123"
+  description = "The confirm-password of database admin(15 characters minimum, at least one uppercase character, one lowercase character and one number)"
+  #default     = "Workstation*123"
 }
 
 variable "storage" {
