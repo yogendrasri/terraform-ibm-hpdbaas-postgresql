@@ -29,7 +29,7 @@ variable "name_prefix" {
 # mongodb-flexible or mongodb-free
 variable "plan" {
   type        = string
-  description = "The type of plan the service instance should run under (standard)"
+  description = "The type of plan the service instance should run under (mongodb-free,mongodb-flexible)"
   #default     = "mongodb-free"
 }
 
