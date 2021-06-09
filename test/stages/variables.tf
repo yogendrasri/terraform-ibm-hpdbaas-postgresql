@@ -7,7 +7,7 @@ variable "resource_group_name" {
 
 variable "hpcs-resource-group" {
   type        = string
-  description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
+  description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the PostgreSQL instance"
   
 }
 
@@ -61,6 +61,6 @@ variable "hpcs-key" {
 
 variable "authorize-kms" {
   type        = string
-  description = "Flag indicating that the authorization for MongoDB to read keys in the KMS should be created"
+  description = "Flag indicating that the authorization for PostgreSQL to read keys in the KMS should be created"
   default     = "true"
 }

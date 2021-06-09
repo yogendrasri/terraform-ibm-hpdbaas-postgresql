@@ -7,9 +7,9 @@ data "ibm_resource_group" "hpcs_resource_group" {
 }
 
 locals {
-  service            = "hyperp-dbaas-mongodb"
+  service            = "hyperp-dbaas-postgresql"
   name_prefix        = var.name_prefix != "" ? var.name_prefix : var.resource_group_name
-  name               = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-hpdbaas-mongodb"
+  name               = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-hpdbaas-postgresql"
   hpcs-resource-group = var.hpcs-resource-group != "" ? var.hpcs-resource-group : var.resource_group_name
   hpcs-region = var.hpcs-region != "" ? var.hpcs-region : var.resource_location
   kyok-enabled       = var.hpcs-name != "" && var.hpcs-key != ""
@@ -59,7 +59,7 @@ resource "ibm_iam_authorization_policy" "policy" {
   roles                       = ["Reader"]
 }
 
-resource "ibm_resource_instance" "hyperp-dbaas-mongodb_instance" {
+resource "ibm_resource_instance" "hyperp-dbaas-postgresql_instance" {
   depends_on = [ibm_iam_authorization_policy.policy]
 
   name                 = local.name
@@ -77,8 +77,8 @@ resource "ibm_resource_instance" "hyperp-dbaas-mongodb_instance" {
   }
 }
 
-data "ibm_resource_instance" "hyperp-dbaas-mongodb_instance" {
-  depends_on        = [ibm_resource_instance.hyperp-dbaas-mongodb_instance]
+data "ibm_resource_instance" "hyperp-dbaas-postgresql_instance" {
+  depends_on        = [ibm_resource_instance.hyperp-dbaas-postgresql_instance]
 
   name              = local.name
   resource_group_id = data.ibm_resource_group.resource_group.id

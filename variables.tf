@@ -26,12 +26,13 @@ variable "name_prefix" {
   #default     = ""
 }
 
-# mongodb-flexible or mongodb-free
+# "postgresql-free" or "postgresql-flexible".
 variable "plan" {
   type        = string
-  description = "The type of plan the service instance should run under (mongodb-free,mongodb-flexible)"
-  #default     = "mongodb-free"
+  description = "The type of plan the service instance should run under (postgresql-free, postgresql-flexible)"
+  #default     = "postgresql-free"
 }
+
 
 variable "private_endpoint" {
   type        = string
@@ -47,13 +48,13 @@ variable "role" {
 
 variable "hpcs-region" {
   type        = string
-  description = "The region where the hpcs instance has been provisioned. If not provided defaults to the same region as the MongoDB instance"
+  description = "The region where the hpcs instance has been provisioned. If not provided defaults to the same region as the PostgreSQL instance"
   
 }
 
 variable "hpcs-resource-group" {
   type        = string
-  description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the MongoDB instance"
+  description = "The resource group where the hpcs instance has been provisioned. If not provided defaults to the same resource group as the PostgreSQL instance"
   
 }
 
@@ -71,7 +72,7 @@ variable "hpcs-key" {
 
 variable "authorize-kms" {
   type        = bool
-  description = "Flag indicating that the authorization for Hyper Protect DBaaS for MongoDB to read keys in the KMS should be created"
+  description = "Flag indicating that the authorization for Hyper Protect DBaaS for PostgreSQL to read keys in the KMS should be created"
   default     = false
 }
 

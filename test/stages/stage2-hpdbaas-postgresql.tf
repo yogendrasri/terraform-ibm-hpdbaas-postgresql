@@ -1,4 +1,4 @@
-module "hpdbaas_mongodb" {
+module "hpdbaas_postgresql" {
   source = "./module"
 
   resource_group_name = module.resource_group.name
